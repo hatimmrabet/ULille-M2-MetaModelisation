@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simplejava:JPackage
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:simplejava="http://www.example.org/simplejava"
+    xsi:schemaLocation="http://www.example.org/simplejava simplejava.ecore">
+  <classes nom="voiture"
+      mere="//@classes.1"/>
+  <classes nom="vehicule"
+      filles="//@classes.0 //@classes.2">
+    <attributs
+        nom="plaque"/>
+  </classes>
+  <classes nom="moto"
+      mere="//@classes.1"/>
+  <interfaces/>
+</simplejava:JPackage>
