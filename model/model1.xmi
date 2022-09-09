@@ -4,15 +4,46 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:simplejava="http://www.example.org/simplejava"
-    xsi:schemaLocation="http://www.example.org/simplejava simplejava.ecore">
+    xsi:schemaLocation="http://www.example.org/simplejava simplejava.ecore"
+    nom="java">
   <classes nom="voiture"
-      mere="//@classes.1"/>
-  <classes nom="vehicule"
-      filles="//@classes.0 //@classes.2">
+      interfaces="//@interfaces.0">
+    <methodes
+        nom="acheter">
+      <parametres
+          nom="ancien_prop"/>
+      <parametres
+          nom="nv_prop"/>
+      <parametres
+          nom="prix"/>
+    </methodes>
     <attributs
         nom="plaque"/>
   </classes>
-  <classes nom="moto"
-      mere="//@classes.1"/>
-  <interfaces/>
+  <classes nom="moto">
+    <methodes
+        nom="acheter">
+      <parametres
+          nom="ancien_prop"/>
+      <parametres
+          nom="nv_prop"/>
+      <parametres
+          nom="prix"/>
+    </methodes>
+    <attributs
+        nom="vitesseMax"/>
+  </classes>
+  <interfaces
+      nom="Vehicule"
+      classes="//@classes.0">
+    <methodes
+        nom="acheter">
+      <parametres
+          nom="ancien_prop"/>
+      <parametres
+          nom="nv_prop"/>
+      <parametres
+          nom="prix"/>
+    </methodes>
+  </interfaces>
 </simplejava:JPackage>

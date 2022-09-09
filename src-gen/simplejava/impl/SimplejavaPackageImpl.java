@@ -169,7 +169,7 @@ public class SimplejavaPackageImpl extends EPackageImpl implements SimplejavaPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getJPackage_Contienent() {
+	public EReference getJPackage_Classes() {
 		return (EReference) jPackageEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -178,7 +178,7 @@ public class SimplejavaPackageImpl extends EPackageImpl implements SimplejavaPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getJPackage_Contient() {
+	public EReference getJPackage_Interfaces() {
 		return (EReference) jPackageEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -187,17 +187,8 @@ public class SimplejavaPackageImpl extends EPackageImpl implements SimplejavaPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getJPackage_Classes() {
+	public EReference getJPackage_Packages() {
 		return (EReference) jPackageEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getJPackage_Interfaces() {
-		return (EReference) jPackageEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -455,10 +446,9 @@ public class SimplejavaPackageImpl extends EPackageImpl implements SimplejavaPac
 
 		// Create classes and their features
 		jPackageEClass = createEClass(JPACKAGE);
-		createEReference(jPackageEClass, JPACKAGE__CONTIENENT);
-		createEReference(jPackageEClass, JPACKAGE__CONTIENT);
 		createEReference(jPackageEClass, JPACKAGE__CLASSES);
 		createEReference(jPackageEClass, JPACKAGE__INTERFACES);
+		createEReference(jPackageEClass, JPACKAGE__PACKAGES);
 
 		jClassEClass = createEClass(JCLASS);
 		createEReference(jClassEClass, JCLASS__METHODES);
@@ -527,25 +517,22 @@ public class SimplejavaPackageImpl extends EPackageImpl implements SimplejavaPac
 		jInterfaceEClass.getESuperTypes().add(this.getJType());
 		jTypeEClass.getESuperTypes().add(this.getJNamedElement());
 		jAttributEClass.getESuperTypes().add(this.getJVariable());
-		jAttributEClass.getESuperTypes().add(this.getJType());
 		jParametreEClass.getESuperTypes().add(this.getJVariable());
+		jVariableEClass.getESuperTypes().add(this.getJType());
 		jMethodeEClass.getESuperTypes().add(this.getJType());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(jPackageEClass, JPackage.class, "JPackage", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getJPackage_Contienent(), this.getJPackage(), this.getJPackage_Contient(), "contienent", null, 0,
-				-1, JPackage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getJPackage_Contient(), this.getJPackage(), this.getJPackage_Contienent(), "contient", null, 0,
-				1, JPackage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getJPackage_Classes(), this.getJClass(), this.getJClass_Jpackage(), "classes", null, 0, -1,
 				JPackage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getJPackage_Interfaces(), this.getJInterface(), this.getJInterface_Jpackage(), "interfaces",
 				null, 0, -1, JPackage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getJPackage_Packages(), this.getJPackage(), null, "packages", null, 0, -1, JPackage.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(jClassEClass, JClass.class, "JClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getJClass_Methodes(), this.getJMethode(), this.getJMethode_Classe(), "methodes", null, 0, -1,

@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="simplejava" nsURI="http://www.example.org/simplejava" nsPrefix="simplejava">
-  <eClassifiers xsi:type="ecore:EClass" name="JPackage">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="contienent" upperBound="-1"
-        eType="#//JPackage" eOpposite="#//JPackage/contient"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="contient" eType="#//JPackage"
-        eOpposite="#//JPackage/contienent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="JPackage" eSuperTypes="#//JType">
     <eStructuralFeatures xsi:type="ecore:EReference" name="classes" upperBound="-1"
         eType="#//JClass" containment="true" eOpposite="#//JClass/jpackage"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="interfaces" upperBound="-1"
         eType="#//JInterface" containment="true" eOpposite="#//JInterface/jpackage"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="packages" upperBound="-1"
+        eType="#//JPackage" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="JClass" eSuperTypes="#//JType">
     <eStructuralFeatures xsi:type="ecore:EReference" name="methodes" upperBound="-1"
@@ -38,9 +36,9 @@
         eType="#//JClass" eOpposite="#//JClass/interfaces"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="JType" eSuperTypes="#//JNamedElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="JAttribut" eSuperTypes="#//JVariable #//JType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="JAttribut" eSuperTypes="#//JVariable"/>
   <eClassifiers xsi:type="ecore:EClass" name="JParametre" eSuperTypes="#//JVariable"/>
-  <eClassifiers xsi:type="ecore:EClass" name="JVariable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="JVariable" eSuperTypes="#//JType"/>
   <eClassifiers xsi:type="ecore:EClass" name="JNamedElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>

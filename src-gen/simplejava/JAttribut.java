@@ -12,5 +12,5 @@ package simplejava;
  * @model
  * @generated
  */
-public interface JAttribut extends JVariable, JType {
+public interface JAttribut extends JVariable {
 } // JAttribut

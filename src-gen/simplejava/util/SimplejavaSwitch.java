@@ -123,12 +123,20 @@ public class SimplejavaSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseJVariable(jParametre);
 			if (result == null)
+				result = caseJType(jParametre);
+			if (result == null)
+				result = caseJNamedElement(jParametre);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case SimplejavaPackage.JVARIABLE: {
 			JVariable jVariable = (JVariable) theEObject;
 			T result = caseJVariable(jVariable);
+			if (result == null)
+				result = caseJType(jVariable);
+			if (result == null)
+				result = caseJNamedElement(jVariable);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;

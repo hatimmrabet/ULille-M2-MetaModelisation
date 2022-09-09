@@ -67,31 +67,13 @@ public interface SimplejavaPackage extends EPackage {
 	int JPACKAGE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Contienent</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int JPACKAGE__CONTIENENT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Contient</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int JPACKAGE__CONTIENT = 1;
-
-	/**
 	 * The feature id for the '<em><b>Classes</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int JPACKAGE__CLASSES = 2;
+	int JPACKAGE__CLASSES = 0;
 
 	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
@@ -100,7 +82,16 @@ public interface SimplejavaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int JPACKAGE__INTERFACES = 3;
+	int JPACKAGE__INTERFACES = 1;
+
+	/**
+	 * The feature id for the '<em><b>Packages</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JPACKAGE__PACKAGES = 2;
 
 	/**
 	 * The number of structural features of the '<em>JPackage</em>' class.
@@ -109,7 +100,7 @@ public interface SimplejavaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int JPACKAGE_FEATURE_COUNT = 4;
+	int JPACKAGE_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>JPackage</em>' class.
@@ -378,13 +369,22 @@ public interface SimplejavaPackage extends EPackage {
 	int JVARIABLE = 6;
 
 	/**
+	 * The feature id for the '<em><b>Nom</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JVARIABLE__NOM = JTYPE__NOM;
+
+	/**
 	 * The number of structural features of the '<em>JVariable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int JVARIABLE_FEATURE_COUNT = 0;
+	int JVARIABLE_FEATURE_COUNT = JTYPE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>JVariable</em>' class.
@@ -393,7 +393,7 @@ public interface SimplejavaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int JVARIABLE_OPERATION_COUNT = 0;
+	int JVARIABLE_OPERATION_COUNT = JTYPE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link simplejava.impl.JAttributImpl <em>JAttribut</em>}' class.
@@ -412,7 +412,7 @@ public interface SimplejavaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int JATTRIBUT__NOM = JVARIABLE_FEATURE_COUNT + 0;
+	int JATTRIBUT__NOM = JVARIABLE__NOM;
 
 	/**
 	 * The number of structural features of the '<em>JAttribut</em>' class.
@@ -421,7 +421,7 @@ public interface SimplejavaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int JATTRIBUT_FEATURE_COUNT = JVARIABLE_FEATURE_COUNT + 1;
+	int JATTRIBUT_FEATURE_COUNT = JVARIABLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>JAttribut</em>' class.
@@ -441,6 +441,15 @@ public interface SimplejavaPackage extends EPackage {
 	 * @generated
 	 */
 	int JPARAMETRE = 5;
+
+	/**
+	 * The feature id for the '<em><b>Nom</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JPARAMETRE__NOM = JVARIABLE__NOM;
 
 	/**
 	 * The number of structural features of the '<em>JParametre</em>' class.
@@ -553,28 +562,6 @@ public interface SimplejavaPackage extends EPackage {
 	EClass getJPackage();
 
 	/**
-	 * Returns the meta object for the reference list '{@link simplejava.JPackage#getContienent <em>Contienent</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Contienent</em>'.
-	 * @see simplejava.JPackage#getContienent()
-	 * @see #getJPackage()
-	 * @generated
-	 */
-	EReference getJPackage_Contienent();
-
-	/**
-	 * Returns the meta object for the reference '{@link simplejava.JPackage#getContient <em>Contient</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Contient</em>'.
-	 * @see simplejava.JPackage#getContient()
-	 * @see #getJPackage()
-	 * @generated
-	 */
-	EReference getJPackage_Contient();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link simplejava.JPackage#getClasses <em>Classes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -595,6 +582,17 @@ public interface SimplejavaPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getJPackage_Interfaces();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link simplejava.JPackage#getPackages <em>Packages</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Packages</em>'.
+	 * @see simplejava.JPackage#getPackages()
+	 * @see #getJPackage()
+	 * @generated
+	 */
+	EReference getJPackage_Packages();
 
 	/**
 	 * Returns the meta object for class '{@link simplejava.JClass <em>JClass</em>}'.
@@ -897,22 +895,6 @@ public interface SimplejavaPackage extends EPackage {
 		EClass JPACKAGE = eINSTANCE.getJPackage();
 
 		/**
-		 * The meta object literal for the '<em><b>Contienent</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference JPACKAGE__CONTIENENT = eINSTANCE.getJPackage_Contienent();
-
-		/**
-		 * The meta object literal for the '<em><b>Contient</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference JPACKAGE__CONTIENT = eINSTANCE.getJPackage_Contient();
-
-		/**
 		 * The meta object literal for the '<em><b>Classes</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -927,6 +909,14 @@ public interface SimplejavaPackage extends EPackage {
 		 * @generated
 		 */
 		EReference JPACKAGE__INTERFACES = eINSTANCE.getJPackage_Interfaces();
+
+		/**
+		 * The meta object literal for the '<em><b>Packages</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference JPACKAGE__PACKAGES = eINSTANCE.getJPackage_Packages();
 
 		/**
 		 * The meta object literal for the '{@link simplejava.impl.JClassImpl <em>JClass</em>}' class.

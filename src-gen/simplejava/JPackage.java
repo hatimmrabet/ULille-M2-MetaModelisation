@@ -15,10 +15,9 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link simplejava.JPackage#getContienent <em>Contienent</em>}</li>
- *   <li>{@link simplejava.JPackage#getContient <em>Contient</em>}</li>
  *   <li>{@link simplejava.JPackage#getClasses <em>Classes</em>}</li>
  *   <li>{@link simplejava.JPackage#getInterfaces <em>Interfaces</em>}</li>
+ *   <li>{@link simplejava.JPackage#getPackages <em>Packages</em>}</li>
  * </ul>
  *
  * @see simplejava.SimplejavaPackage#getJPackage()
@@ -26,44 +25,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface JPackage extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Contienent</b></em>' reference list.
-	 * The list contents are of type {@link simplejava.JPackage}.
-	 * It is bidirectional and its opposite is '{@link simplejava.JPackage#getContient <em>Contient</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Contienent</em>' reference list.
-	 * @see simplejava.SimplejavaPackage#getJPackage_Contienent()
-	 * @see simplejava.JPackage#getContient
-	 * @model opposite="contient"
-	 * @generated
-	 */
-	EList<JPackage> getContienent();
-
-	/**
-	 * Returns the value of the '<em><b>Contient</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link simplejava.JPackage#getContienent <em>Contienent</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Contient</em>' reference.
-	 * @see #setContient(JPackage)
-	 * @see simplejava.SimplejavaPackage#getJPackage_Contient()
-	 * @see simplejava.JPackage#getContienent
-	 * @model opposite="contienent"
-	 * @generated
-	 */
-	JPackage getContient();
-
-	/**
-	 * Sets the value of the '{@link simplejava.JPackage#getContient <em>Contient</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Contient</em>' reference.
-	 * @see #getContient()
-	 * @generated
-	 */
-	void setContient(JPackage value);
-
 	/**
 	 * Returns the value of the '<em><b>Classes</b></em>' containment reference list.
 	 * The list contents are of type {@link simplejava.JClass}.
@@ -91,5 +52,17 @@ public interface JPackage extends EObject {
 	 * @generated
 	 */
 	EList<JInterface> getInterfaces();
+
+	/**
+	 * Returns the value of the '<em><b>Packages</b></em>' containment reference list.
+	 * The list contents are of type {@link simplejava.JPackage}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Packages</em>' containment reference list.
+	 * @see simplejava.SimplejavaPackage#getJPackage_Packages()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<JPackage> getPackages();
 
 } // JPackage

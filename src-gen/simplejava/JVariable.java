@@ -2,8 +2,6 @@
  */
 package simplejava;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>JVariable</b></em>'.
@@ -14,5 +12,5 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface JVariable extends EObject {
+public interface JVariable extends JType {
 } // JVariable

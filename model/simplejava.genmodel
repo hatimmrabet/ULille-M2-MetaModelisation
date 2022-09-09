@@ -10,10 +10,9 @@
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="Simplejava" disposableProviderFactory="true" ecorePackage="simplejava.ecore#/">
     <genClasses ecoreClass="simplejava.ecore#//JPackage">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simplejava.ecore#//JPackage/contienent"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simplejava.ecore#//JPackage/contient"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference simplejava.ecore#//JPackage/classes"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference simplejava.ecore#//JPackage/interfaces"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference simplejava.ecore#//JPackage/packages"/>
     </genClasses>
     <genClasses ecoreClass="simplejava.ecore#//JClass">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference simplejava.ecore#//JClass/methodes"/>

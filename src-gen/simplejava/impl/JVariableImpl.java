@@ -3,9 +3,6 @@
 package simplejava.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import simplejava.JVariable;
 import simplejava.SimplejavaPackage;
 
@@ -16,7 +13,7 @@ import simplejava.SimplejavaPackage;
  *
  * @generated
  */
-public class JVariableImpl extends MinimalEObjectImpl.Container implements JVariable {
+public class JVariableImpl extends JTypeImpl implements JVariable {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

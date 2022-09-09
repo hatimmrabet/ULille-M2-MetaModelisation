@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simplejava:JPackage
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:simplejava="http://www.example.org/simplejava"
+    xsi:schemaLocation="http://www.example.org/simplejava simplejava.ecore"
+    nom="java">
+  <packages
+      nom="lille1">
+    <packages
+        nom="ent">
+      <classes
+          nom="Humain"/>
+      <classes
+          nom="Animal"/>
+    </packages>
+  </packages>
+  <packages
+      nom="lille3">
+    <packages
+        nom="univ">
+      <classes
+          nom="Ecole"/>
+      <classes
+          nom="Salle"/>
+    </packages>
+  </packages>
+</simplejava:JPackage>
