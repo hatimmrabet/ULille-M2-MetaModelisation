@@ -3,8 +3,6 @@
   <viewpoint:DAnalysis uid="_0s2qwC3DEe2WRJZUPA1V5A" selectedViews="_012OsC3DEe2WRJZUPA1V5A __OfhsDAtEe2RmOajnRSD9Q __0a5QDAtEe2RmOajnRSD9Q" version="15.0.0.202201261500">
     <semanticResources>simplejava.ecore</semanticResources>
     <semanticResources>simplejava.genmodel</semanticResources>
-    <semanticResources>model1.xmi</semanticResources>
-    <semanticResources>Test1.xmi</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_012OsC3DEe2WRJZUPA1V5A">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_03TAMC3DEe2WRJZUPA1V5A" name="simplejava" repPath="#_02zQ8C3DEe2WRJZUPA1V5A" changeId="61f27a18-5258-48cd-a196-809139b9b690">
