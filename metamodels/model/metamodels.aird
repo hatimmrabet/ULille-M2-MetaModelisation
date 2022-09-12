@@ -10,7 +10,6 @@
     <semanticResources>filesystem.ecore</semanticResources>
     <semanticResources>http://filesystem/1.0</semanticResources>
     <semanticResources>Disque.xmi</semanticResources>
-    <semanticResources>simplejava.ecore</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_EtdScDD3Ee249qmxxnvalw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_Et8aoDD3Ee249qmxxnvalw" name="metamodels" repPath="#_Et4wQDD3Ee249qmxxnvalw" changeId="062577ce-897d-429a-8693-d7ab3b1c1d4b">
