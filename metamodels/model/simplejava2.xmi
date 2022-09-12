@@ -20,7 +20,8 @@
     <attributs
         nom="plaque"/>
   </classes>
-  <classes nom="moto">
+  <classes nom="moto"
+      interfaces="//@interfaces.0">
     <methodes
         nom="acheter">
       <parametres
@@ -35,7 +36,7 @@
   </classes>
   <interfaces
       nom="Vehicule"
-      classes="//@classes.0">
+      classes="//@classes.0 //@classes.1">
     <methodes
         nom="acheter">
       <parametres
