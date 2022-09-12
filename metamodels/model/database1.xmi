@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database:JTable
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:database="http://filesystem/1.0"
+    xsi:schemaLocation="http://filesystem/1.0 database.ecore"
+    name="Personne">
+  <key kind="primary"
+      name="id"/>
+  <columns name="name"
+      type="string"/>
+  <columns name="id"/>
+  <columns name="age"
+      type="int"/>
+  <foreignkeys
+      kind="FK"
+      name="cardNumber"/>
+</database:JTable>

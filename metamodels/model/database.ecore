@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="database" nsURI="http://filesystem/1.0" nsPrefix="database">
+  <eClassifiers xsi:type="ecore:EClass" name="JTable" eSuperTypes="#//JRmodelElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="key" upperBound="-1" eType="#//JKey"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="columns" upperBound="-1"
+        eType="#//JColumn" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="foreignkeys" upperBound="-1"
+        eType="#//JForeignKEy" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JForeignKEy" eSuperTypes="#//JRmodelElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="key" upperBound="-1" eType="#//JKey"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="column" lowerBound="1"
+        eType="#//JColumn" eOpposite="#//JColumn/foreignkey"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JKey" eSuperTypes="#//JRmodelElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="JColumn" eSuperTypes="#//JRmodelElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="key" eType="#//JKey"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="column" upperBound="-1"
+        eType="#//JKey"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="foreignkey" eType="#//JForeignKEy"
+        eOpposite="#//JForeignKEy/column"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JRmodelElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="kind" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RDBMS">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="column" eType="#//JColumn"/>
+  </eClassifiers>
+</ecore:EPackage>
