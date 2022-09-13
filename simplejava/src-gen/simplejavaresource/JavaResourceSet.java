@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
+import simplejava.JAttribut;
 import simplejava.JClass;
 import simplejava.JPackage;
 import simplejava.SimplejavaPackage;
@@ -19,10 +20,28 @@ import simplejava.SimplejavaPackage;
 public class JavaResourceSet {
 	
 	public static EList<JClass> getAllClasses(JPackage jpack){
-		EList<JClass> classes = (EList<JClass>) jpack.eGet(jpack.eClass().getEStructuralFeature("classes"));
-		return classes;
+		return jpack.getClasses();
+	}
+	
+	public static void displayAttributes(JPackage jpack)
+	{
+		for(JClass c : getAllClasses(jpack))
+		{
+			System.out.println(c.getNom());
+			for(JAttribut a : c.getAttributs())
+			{
+				System.out.println("->"+a.getNom());
+			}
+		}
 	}
 
+	public static int getDeep(JClass classe) {
+		
+		return 0;
+		
+		
+	}
+	
 	public static void main(String[] args) {
 		ResourceSet rset = new ResourceSetImpl();
 		rset.getResourceFactoryRegistry().getExtensionToFactoryMap().put("ecore" , new XMIResourceFactoryImpl() ) ;
@@ -33,10 +52,8 @@ public class JavaResourceSet {
 		
 		System.out.println("Debut de programme");
 		System.out.println(model.getNom());
-		for(JClass c : getAllClasses(model))
-		{
-			System.out.println(c.getNom());
-		}	
+
+		displayAttributes(model);
 
 	}
 	

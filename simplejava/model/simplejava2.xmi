@@ -7,7 +7,8 @@
     xsi:schemaLocation="http://www.example.org/simplejava simplejava.ecore"
     nom="javaTest">
   <classes nom="voiture"
-      interfaces="//@interfaces.0">
+      filles="//@classes.1"
+      mere="//@classes.3">
     <methodes
         nom="acheter">
       <parametres
@@ -19,9 +20,15 @@
     </methodes>
     <attributs
         nom="plaque"/>
+    <attributs
+        nom="marque"/>
+    <attributs
+        nom="model"/>
   </classes>
+  <classes nom="Voiture sans permis"
+      mere="//@classes.0"/>
   <classes nom="moto"
-      interfaces="//@interfaces.0">
+      mere="//@classes.3">
     <methodes
         nom="acheter">
       <parametres
@@ -34,17 +41,6 @@
     <attributs
         nom="vitesseMax"/>
   </classes>
-  <interfaces
-      nom="Vehicule"
-      classes="//@classes.0 //@classes.1">
-    <methodes
-        nom="acheter">
-      <parametres
-          nom="ancien_prop"/>
-      <parametres
-          nom="nv_prop"/>
-      <parametres
-          nom="prix"/>
-    </methodes>
-  </interfaces>
+  <classes nom="Vehicule"
+      filles="//@classes.0 //@classes.2"/>
 </simplejava:JPackage>
