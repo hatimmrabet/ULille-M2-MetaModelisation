@@ -67,51 +67,6 @@ public interface SimplejavaPackage extends EPackage {
 	int JPACKAGE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Classes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int JPACKAGE__CLASSES = 0;
-
-	/**
-	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int JPACKAGE__INTERFACES = 1;
-
-	/**
-	 * The feature id for the '<em><b>Packages</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int JPACKAGE__PACKAGES = 2;
-
-	/**
-	 * The number of structural features of the '<em>JPackage</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int JPACKAGE_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>JPackage</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int JPACKAGE_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link simplejava.impl.JNamedElementImpl <em>JNamed Element</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -184,6 +139,60 @@ public interface SimplejavaPackage extends EPackage {
 	 * @ordered
 	 */
 	int JTYPE_OPERATION_COUNT = JNAMED_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Nom</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JPACKAGE__NOM = JTYPE__NOM;
+
+	/**
+	 * The feature id for the '<em><b>Classes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JPACKAGE__CLASSES = JTYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JPACKAGE__INTERFACES = JTYPE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Packages</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JPACKAGE__PACKAGES = JTYPE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>JPackage</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JPACKAGE_FEATURE_COUNT = JTYPE_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>JPackage</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JPACKAGE_OPERATION_COUNT = JTYPE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link simplejava.impl.JClassImpl <em>JClass</em>}' class.

@@ -513,6 +513,7 @@ public class SimplejavaPackageImpl extends EPackageImpl implements SimplejavaPac
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		jPackageEClass.getESuperTypes().add(this.getJType());
 		jClassEClass.getESuperTypes().add(this.getJType());
 		jInterfaceEClass.getESuperTypes().add(this.getJType());
 		jTypeEClass.getESuperTypes().add(this.getJNamedElement());

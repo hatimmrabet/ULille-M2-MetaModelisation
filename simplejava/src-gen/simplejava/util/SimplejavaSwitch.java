@@ -70,6 +70,10 @@ public class SimplejavaSwitch<T> extends Switch<T> {
 			JPackage jPackage = (JPackage) theEObject;
 			T result = caseJPackage(jPackage);
 			if (result == null)
+				result = caseJType(jPackage);
+			if (result == null)
+				result = caseJNamedElement(jPackage);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
