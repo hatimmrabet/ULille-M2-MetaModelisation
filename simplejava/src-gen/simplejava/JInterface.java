@@ -13,8 +13,6 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link simplejava.JInterface#getMere <em>Mere</em>}</li>
- *   <li>{@link simplejava.JInterface#getFilles <em>Filles</em>}</li>
  *   <li>{@link simplejava.JInterface#getJpackage <em>Jpackage</em>}</li>
  *   <li>{@link simplejava.JInterface#getMethodes <em>Methodes</em>}</li>
  *   <li>{@link simplejava.JInterface#getClasses <em>Classes</em>}</li>
@@ -25,44 +23,6 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface JInterface extends JType {
-	/**
-	 * Returns the value of the '<em><b>Mere</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link simplejava.JInterface#getFilles <em>Filles</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Mere</em>' reference.
-	 * @see #setMere(JInterface)
-	 * @see simplejava.SimplejavaPackage#getJInterface_Mere()
-	 * @see simplejava.JInterface#getFilles
-	 * @model opposite="filles"
-	 * @generated
-	 */
-	JInterface getMere();
-
-	/**
-	 * Sets the value of the '{@link simplejava.JInterface#getMere <em>Mere</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Mere</em>' reference.
-	 * @see #getMere()
-	 * @generated
-	 */
-	void setMere(JInterface value);
-
-	/**
-	 * Returns the value of the '<em><b>Filles</b></em>' reference list.
-	 * The list contents are of type {@link simplejava.JInterface}.
-	 * It is bidirectional and its opposite is '{@link simplejava.JInterface#getMere <em>Mere</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Filles</em>' reference list.
-	 * @see simplejava.SimplejavaPackage#getJInterface_Filles()
-	 * @see simplejava.JInterface#getMere
-	 * @model opposite="mere"
-	 * @generated
-	 */
-	EList<JInterface> getFilles();
-
 	/**
 	 * Returns the value of the '<em><b>Jpackage</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link simplejava.JPackage#getInterfaces <em>Interfaces</em>}'.

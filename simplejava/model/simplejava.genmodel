@@ -23,8 +23,6 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simplejava.ecore#//JClass/interfaces"/>
     </genClasses>
     <genClasses ecoreClass="simplejava.ecore#//JInterface">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simplejava.ecore#//JInterface/mere"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simplejava.ecore#//JInterface/filles"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simplejava.ecore#//JInterface/jpackage"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference simplejava.ecore#//JInterface/methodes"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simplejava.ecore#//JInterface/classes"/>

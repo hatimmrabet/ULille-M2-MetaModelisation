@@ -268,7 +268,7 @@ public class SimplejavaPackageImpl extends EPackageImpl implements SimplejavaPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getJInterface_Mere() {
+	public EReference getJInterface_Jpackage() {
 		return (EReference) jInterfaceEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -277,7 +277,7 @@ public class SimplejavaPackageImpl extends EPackageImpl implements SimplejavaPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getJInterface_Filles() {
+	public EReference getJInterface_Methodes() {
 		return (EReference) jInterfaceEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -286,26 +286,8 @@ public class SimplejavaPackageImpl extends EPackageImpl implements SimplejavaPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getJInterface_Jpackage() {
-		return (EReference) jInterfaceEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getJInterface_Methodes() {
-		return (EReference) jInterfaceEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getJInterface_Classes() {
-		return (EReference) jInterfaceEClass.getEStructuralFeatures().get(4);
+		return (EReference) jInterfaceEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -459,8 +441,6 @@ public class SimplejavaPackageImpl extends EPackageImpl implements SimplejavaPac
 		createEReference(jClassEClass, JCLASS__INTERFACES);
 
 		jInterfaceEClass = createEClass(JINTERFACE);
-		createEReference(jInterfaceEClass, JINTERFACE__MERE);
-		createEReference(jInterfaceEClass, JINTERFACE__FILLES);
 		createEReference(jInterfaceEClass, JINTERFACE__JPACKAGE);
 		createEReference(jInterfaceEClass, JINTERFACE__METHODES);
 		createEReference(jInterfaceEClass, JINTERFACE__CLASSES);
@@ -557,12 +537,6 @@ public class SimplejavaPackageImpl extends EPackageImpl implements SimplejavaPac
 
 		initEClass(jInterfaceEClass, JInterface.class, "JInterface", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getJInterface_Mere(), this.getJInterface(), this.getJInterface_Filles(), "mere", null, 0, 1,
-				JInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getJInterface_Filles(), this.getJInterface(), this.getJInterface_Mere(), "filles", null, 0, -1,
-				JInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getJInterface_Jpackage(), this.getJPackage(), this.getJPackage_Interfaces(), "jpackage", null, 1,
 				1, JInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

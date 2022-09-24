@@ -305,31 +305,13 @@ public interface SimplejavaPackage extends EPackage {
 	int JINTERFACE__NOM = JTYPE__NOM;
 
 	/**
-	 * The feature id for the '<em><b>Mere</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int JINTERFACE__MERE = JTYPE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Filles</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int JINTERFACE__FILLES = JTYPE_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Jpackage</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int JINTERFACE__JPACKAGE = JTYPE_FEATURE_COUNT + 2;
+	int JINTERFACE__JPACKAGE = JTYPE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Methodes</b></em>' containment reference list.
@@ -338,7 +320,7 @@ public interface SimplejavaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int JINTERFACE__METHODES = JTYPE_FEATURE_COUNT + 3;
+	int JINTERFACE__METHODES = JTYPE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Classes</b></em>' reference list.
@@ -347,7 +329,7 @@ public interface SimplejavaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int JINTERFACE__CLASSES = JTYPE_FEATURE_COUNT + 4;
+	int JINTERFACE__CLASSES = JTYPE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>JInterface</em>' class.
@@ -356,7 +338,7 @@ public interface SimplejavaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int JINTERFACE_FEATURE_COUNT = JTYPE_FEATURE_COUNT + 5;
+	int JINTERFACE_FEATURE_COUNT = JTYPE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>JInterface</em>' class.
@@ -690,28 +672,6 @@ public interface SimplejavaPackage extends EPackage {
 	EClass getJInterface();
 
 	/**
-	 * Returns the meta object for the reference '{@link simplejava.JInterface#getMere <em>Mere</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Mere</em>'.
-	 * @see simplejava.JInterface#getMere()
-	 * @see #getJInterface()
-	 * @generated
-	 */
-	EReference getJInterface_Mere();
-
-	/**
-	 * Returns the meta object for the reference list '{@link simplejava.JInterface#getFilles <em>Filles</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Filles</em>'.
-	 * @see simplejava.JInterface#getFilles()
-	 * @see #getJInterface()
-	 * @generated
-	 */
-	EReference getJInterface_Filles();
-
-	/**
 	 * Returns the meta object for the container reference '{@link simplejava.JInterface#getJpackage <em>Jpackage</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -994,22 +954,6 @@ public interface SimplejavaPackage extends EPackage {
 		 * @generated
 		 */
 		EClass JINTERFACE = eINSTANCE.getJInterface();
-
-		/**
-		 * The meta object literal for the '<em><b>Mere</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference JINTERFACE__MERE = eINSTANCE.getJInterface_Mere();
-
-		/**
-		 * The meta object literal for the '<em><b>Filles</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference JINTERFACE__FILLES = eINSTANCE.getJInterface_Filles();
 
 		/**
 		 * The meta object literal for the '<em><b>Jpackage</b></em>' container reference feature.

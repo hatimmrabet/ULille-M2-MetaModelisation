@@ -35,11 +35,54 @@ public class JavaResourceSet {
 		}
 	}
 
-	public static int getDeep(JClass classe) {
+	public static int getDeep(JClass jc) {
+		if(jc.getMere() == null)
+			return 0;
+		else
+			return 1+ getDeep(jc.getMere());
+	}
+	
+	public static void display_deep_by_package(JPackage j)
+	{
+		for(JClass c : j.getClasses())
+		{
+			System.out.println(c.getNom()+" : getdeep = "+getDeep(c));
+		}
+		if(j.getPackages().size() != 0)
+		{
+			for(JPackage j1 : j.getPackages())
+			{
+				display_deep_by_package(j1);
+			}
+		}
+	}
+	
+	public static String getPackagesNames(JPackage j)
+	{
+		JPackage pere = (JPackage) j.eContainer();
+		if( pere != null)
+			return getPackagesNames(pere)+"."+j.getNom();
+		else
+			return j.getNom();
 		
-		return 0;
-		
-		
+	}
+	
+	public static String getFullName(JClass c)
+	{
+		String ret = getPackagesNames(c.getJpackage())+"."+c.getNom();
+		return ret;
+	}
+	
+	public static void getFullnameClassesPackage(JPackage p)
+	{
+		for(JClass c : p.getClasses())
+		{
+			System.out.println(getFullName(c));
+		}
+		for(JPackage jp : p.getPackages())
+		{
+			getFullnameClassesPackage(jp);
+		}
 	}
 	
 	public static void main(String[] args) {
@@ -52,8 +95,15 @@ public class JavaResourceSet {
 		
 		System.out.println("Debut de programme");
 		System.out.println(model.getNom());
-
-		displayAttributes(model);
+//		displayAttributes(model);
+//		display_deep_by_package(model);
+//		for(JClass c : model.getPackages())
+//		{
+//			System.out.println(getFullName(c));
+//			
+//		}
+		getFullnameClassesPackage(model);
+		
 
 	}
 	

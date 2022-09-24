@@ -25,7 +25,7 @@
     <attributs
         nom="model"/>
   </classes>
-  <classes nom="Voiture sans permis"
+  <classes nom="VoitureSansPermis"
       mere="//@classes.0"/>
   <classes nom="moto"
       mere="//@classes.3">
@@ -43,4 +43,23 @@
   </classes>
   <classes nom="Vehicule"
       filles="//@classes.0 //@classes.2"/>
+  <interfaces
+      nom="IVehicule"/>
+  <packages
+      nom="univ">
+    <classes
+        nom="Maison"
+        interfaces="//@packages.0/@interfaces.0"/>
+    <classes
+        nom="Appartement"
+        interfaces="//@packages.0/@interfaces.0"/>
+    <interfaces
+        nom="ILogement"
+        classes="//@packages.0/@classes.1 //@packages.0/@classes.0"/>
+    <packages
+        nom="lille">
+      <classes
+          nom="Quartier"/>
+    </packages>
+  </packages>
 </simplejava:JPackage>

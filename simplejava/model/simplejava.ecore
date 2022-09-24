@@ -24,10 +24,6 @@
         eType="#//JInterface" eOpposite="#//JInterface/classes"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="JInterface" eSuperTypes="#//JType">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="mere" eType="#//JInterface"
-        eOpposite="#//JInterface/filles"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="filles" upperBound="-1"
-        eType="#//JInterface" eOpposite="#//JInterface/mere"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="jpackage" lowerBound="1"
         eType="#//JPackage" eOpposite="#//JPackage/interfaces"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="methodes" upperBound="-1"
