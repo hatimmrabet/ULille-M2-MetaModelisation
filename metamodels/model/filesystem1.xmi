@@ -5,22 +5,37 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:filesystem="http://filesystem/1.0"
     xsi:schemaLocation="http://filesystem/1.0 filesystem.ecore"
-    name="C">
+    name="c">
   <files xsi:type="filesystem:Folder"
-      name="Bureau">
+      name="testing">
     <files xsi:type="filesystem:TextFile"
-        name="test.txt"/>
+        name="code.txt"
+        size="10"/>
     <files xsi:type="filesystem:BinaryFile"
-        name="image.png"/>
-    <files xsi:type="filesystem:ShortcutFile"
-        name="rapport"
-        file="//@files.1"/>
-    <files xsi:type="filesystem:BinaryFile"
-        name="presentation.mp4"/>
+        name="video.mp4"
+        size="1024"/>
+    <files xsi:type="filesystem:TextFile"
+        name="paiement.obs"
+        size="62"/>
+    <files xsi:type="filesystem:TextFile"
+        name="presentation"
+        size="17"/>
+    <files xsi:type="filesystem:Folder"
+        name="etude">
+      <files
+          xsi:type="filesystem:BinaryFile"
+          name="musqieu1.mp3"
+          size="14"/>
+      <files
+          xsi:type="filesystem:ShortcutFile"
+          name="raccourci code"
+          file="//@files.0/@files.0"/>
+    </files>
   </files>
-  <files xsi:type="filesystem:BinaryFile"
-      name="rapport.pdf"/>
+  <files xsi:type="filesystem:TextFile"
+      name="myfile.py"
+      size="17"/>
   <files xsi:type="filesystem:ShortcutFile"
-      name="presentation"
-      file="//@files.0/@files.3"/>
+      name="raccourci video"
+      file="//@files.0/@files.1"/>
 </filesystem:Disque>
