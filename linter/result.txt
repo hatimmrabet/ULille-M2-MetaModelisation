@@ -1,0 +1,102 @@
+### Classe : Vehicule
+Vehicule: OK
+marque: C'est une constante, tout le nom doit etre en majuscule
+FieldName: OK
+Mode: C'est une constante, tout le nom doit etre en majuscule
+Capacite: Le nom doit commencer par une miniscule
+FieldName: OK
+accelerer: OK
+accelerer: MethodeException: OK
+demarrer: OK
+demarrer: Il ne doivent pas lever directement 'Exception'
+Freiner: Le nom doit commencer par une miniscule
+Freiner: MethodeException: OK
+arreter: OK
+arreter: MethodeException: OK
+Ce n'est pas une classe abstraite
+### Classe : velo
+velo: Le nom doit commencer par une majuscule
+Ce n'est pas une classe abstraite
+### Classe : IPersonne
+IPersonne: OK
+IPersonne: commence par un I: OK
+Ce n'est pas une classe abstraite
+### Classe : Imaison
+Imaison: OK
+Imaison:Le nom doit commencer par 2 lettres en majuscule, Im'
+Ce n'est pas une classe abstraite
+### Classe : EStatus
+EStatus: OK
+EStatus: commence par un E: OK
+EStatus:  au moins deux valeurs énumérées: OK
+FieldName: OK
+FieldName: OK
+FieldName: OK
+FieldName: OK
+values: OK
+values: MethodeException: OK
+valueOf: OK
+valueOf: MethodeException: OK
+Ce n'est pas une classe abstraite
+### Classe : Estatus2
+Estatus2: OK
+Estatus2: Le nom doit commencer par 2 lettres en majuscule, 'Es'
+Estatus2:  au moins deux valeurs énumérées: OK
+FieldName: OK
+FieldName: OK
+FieldName: OK
+values: OK
+values: MethodeException: OK
+valueOf: OK
+valueOf: MethodeException: OK
+Ce n'est pas une classe abstraite
+### Classe : status
+status: Le nom doit commencer par une majuscule
+status: Le nom doit commencer par 'E'
+status: Le nom doit commencer par 2 lettres en majuscule, 'st'
+status: Il n'y a pas assez de valeurs, il faut avoir au moins 2 valeurs.
+FieldName: OK
+FieldName: OK
+values: OK
+values: MethodeException: OK
+valueOf: OK
+valueOf: MethodeException: OK
+Ce n'est pas une classe abstraite
+### Classe : AFile
+AFile: OK
+AFile: commence par un A: OK
+AFile: Il n'y a pas de methode abstraite
+getFileName: OK
+getFileName: MethodeException: OK
+getFileSize: OK
+getFileSize: MethodeException: OK
+Ce n'est pas une classe abstraite
+### Classe : afile1
+afile1: Le nom doit commencer par une majuscule
+afile1:Le nom doit commencer par 'A'
+afile1:Le nom doit commencer par 2 lettres en majuscule, 'af'
+afile1: Il n'y a pas de methode abstraite
+Ce n'est pas une classe abstraite
+### Classe : ADocument
+ADocument: OK
+ADocument: commence par un A: OK
+ADocument: AbstractMethodeExist: OK
+getDocumentType: OK
+getDocumentType: MethodeException: OK
+getDocumentName: OK
+getDocumentName: MethodeException: OK
+getDocumentSize: OK
+getDocumentSize: MethodeException: OK
+Ce n'est pas une classe abstraite
+### Classe : Enfant
+Enfant: OK
+Ce n'est pas une classe abstraite
+### Classe : DemoPrivateClass
+DemoPrivateClass: OK
+getInnerPrivateClass: OK
+getInnerPrivateClass: MethodeException: OK
+Ce n'est pas une classe abstraite
+### Classe : NoBreaksException
+NoBreaksException: OK
+Ce n'est pas une classe abstraite
+
