@@ -1,6 +1,13 @@
 package metamodels.filesystem;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EClassifier;
+import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
@@ -8,6 +15,7 @@ import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
 import filesystem.Disque;
 import filesystem.File;
+import filesystem.FilesystemFactory;
 import filesystem.FilesystemPackage;
 import filesystem.Folder;
 import filesystem.ShortcutFile;
@@ -81,10 +89,14 @@ public class FileSystemResourceSet {
 		rset.getResourceFactoryRegistry().getExtensionToFactoryMap().put("ecore" , new XMIResourceFactoryImpl() ) ;
 		rset.getResourceFactoryRegistry( ).getExtensionToFactoryMap().put("xmi" , new XMIResourceFactoryImpl( ) ) ;
 		rset.getPackageRegistry().put(FilesystemPackage.eNS_URI, FilesystemPackage.eINSTANCE);
-		Resource resource = rset.getResource(URI.createFileURI("model/filesystem1.xmi") , true );
-		Disque disk = (Disque) resource.getContents().get(0);	
-
-		System.out.println("nb files = "+nbFiles(disk));
-		System.out.println("size disk= "+sizeDisque(disk));		
+		Resource resource = rset.getResource(URI.createFileURI("model/filesystem.ecore") , true );
+//		Disque disk = (Disque) resource.getContents().get(0);	
+		EPackage pack = (EPackage) resource.getContents().get(0);
+		rset.getPackageRegistry().put(pack.getNsURI(), pack);
+		
+//		System.out.println("nb files = "+nbFiles(disk));
+//		System.out.println("size disk= "+sizeDisque(disk));
+		
+		
 	}
 }
