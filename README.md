@@ -40,3 +40,12 @@ Et J'ai reponsu aux questions du TP dans le fichier java [FileSystemResourceSet.
 ## TP3 - Metaprogrammation
 
 Pour le TP noté, tous les fichiers sont dans le dossier [linter](./linter/).
+
+## TP4 - Serialisation
+
+Pour serialiser, j'ai utilisé Un nouveau package dans le dossier `simplejava`, [serialisation](./simplejava/src-gen/serialisation/) qui contient deux classes : 
+    
+- Launcher: qui recupere le JPackage de mon model XMI, et lance le `Serialiser`.
+- Serialiser: contient les differentes methodes pour transformer les differentes classes de mon model à un json.
+
+Le serialiser contient un attribut id qui permet de donner un id unique à chaque element et qui est incrémenté à chaque fois qu'on l'utilise. l'URI du model est aussi stocké dans le serialiser. et on plus on a une liste qui contient les json de tous les elements serialisé et un hashmap qui contient les elements de base (EObject) et l'Id.
